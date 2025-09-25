@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
             return res.status(401).json({ error: 'Authentication failed: No token provided.' });
         }
 
-        const token = authHeader.split(' ')[1]; // "Bearer TOKEN"
+        const token = authHeader.split(' ')[1]; 
         if (!token) {
             return res.status(401).json({ error: 'Authentication failed: Invalid token format.' });
         }
